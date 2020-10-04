@@ -5,9 +5,7 @@
 html, body {
   width: 100vw;
   height: 100vw;
-  font-family: din-2014,sans-serif;
-  font-weight: 700;
-  font-style: normal; }
+  font-family: din-2014,'Noto Sans JP',sans-serif; }
 
 a {
   text-decoration: none; }
@@ -25,22 +23,21 @@ header {
 
 .header_logo a {
   font-size: 32px;
+  font-weight: bold;
   color: #434343; }
 
 .header_about a {
   width: 40px;
   height: 40px; }
 
-main {
-  padding: 64px 184px; }
-
 .content_box {
-  width: 100%;
+  margin: 64px 184px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
 
 .content {
+  position: relative;
   width: 240px;
   height: 135px;
   margin: 12px;
@@ -50,11 +47,32 @@ main {
   transition: box-shadow 0.5s; }
   .content:hover {
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16); }
+  .content .content_cover {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(8px);
+    transition: opacity 0.5s; }
+    .content .content_cover:hover {
+      opacity: 1; }
+    .content .content_cover .content_title1 {
+      width: 100%;
+      margin: 16px 24px 8px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold; }
+    .content .content_cover .content_title2 {
+      width: 100%;
+      margin: 0 24px;
+      color: white;
+      font-size: 12px;
+      font-weight: bold; }
   .content img {
+    position: absolute;
     width: 100%;
     transition: 0.5s all; }
-    .content img:hover {
-      transform: scale(1.1, 1.1);
-      transition: 0.5s all; }
 
 /*# sourceMappingURL=style.css.map */

@@ -9,9 +9,7 @@ $color-black:#434343;
 html, body {
     width: 100vw;
     height: 100vw;
-    font-family: din-2014,sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    font-family: din-2014,'Noto Sans JP',sans-serif;
 }
 
 a {
@@ -35,6 +33,7 @@ header {
 .header_logo {
     a {
         font-size: 32px;
+        font-weight: bold;
         color: $color-black;
     }
 }
@@ -46,18 +45,15 @@ header {
     }
 }
 
-main {
-    padding: 64px 184px;
-}
-
 .content_box {
-    width: 100%;
+    margin: 64px 184px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .content {
+    position: relative;
     width: 240px;
     height: 135px;
     margin: 12px;
@@ -70,13 +66,40 @@ main {
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
     }
 
-    img {
+    .content_cover {
+        opacity: 0;
         width: 100%;
-        transition: 0.5s all;
+        height: 100%;
+        position: absolute;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.16);
+        backdrop-filter: blur(8px);
+        transition: opacity 0.5s;
 
         &:hover {
-            transform: scale(1.1,1.1);
-            transition: 0.5s all;
+            opacity: 1;
         }
+        
+        .content_title1 {
+            width: 100%;
+            margin: 16px 24px 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .content_title2 {
+            width: 100%;
+            margin: 0 24px;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        transition: 0.5s all;
     }
 }
