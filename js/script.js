@@ -1,4 +1,4 @@
-import anime from 'animejs/lib/anime';
+import anime from '../node_modules/animejs/lib/anime';
 
 barba.init({
     transitions: [
