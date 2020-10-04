@@ -1,19 +1,14 @@
 barba.init({
     transitions: [
-        {
-            async ListeningStateChangedEvent({ current, next, trigger}) {
-                const leave = await leaveAnimation(current);
-                return leave;
-            },
-            afeterLeave({ current, next, trigger }) {
-            },
-            beforeEnter({ current, next, trigger }) {
-                replaceHeadTags(next);
-            },
-            enter({ current, next, trigger }) {
-                enterAnimation(next);
-            }
+    {
+        async ListeningStateChangedEvent({ current, next, trigger}) {
+            const leave = await leaveAnimation(current);
+            return leave;
+        },
+        enter({ current, next, trigger }) {
+            enterAnimation(next);
         }
+    }
     ]
 })
 
