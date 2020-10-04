@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zhikto/portfolio#readme",
   "dependencies": {
+    "@barba/core": "file:node_modules/@barba/core",
     "animejs": "^3.2.0"
   }
 }
