@@ -23,7 +23,7 @@ function leaveAnimation(current) {
     const animation = anime.timeline()
     .add({
       easing           : 'easeInOutExpo',
-      targets          : current.container.querySelector('#content_box'),
+      targets          : current.container.querySelector('#js_box'),
       duration         : 600,
       opacity          : [1, 0],
       scale            : [1, 1.1]
@@ -35,7 +35,7 @@ function enterAnimation(next) {
     const animation = anime.timeline()
     .add({
       easing           : 'easeInOutExpo',
-      targets          : next.container.querySelector('#content_box'),
+      targets          : next.container.querySelector('#js_box'),
       duration         : 1000,
       opacity          : [0, 1],
       scale            : [1.1, 1]
