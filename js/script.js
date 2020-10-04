@@ -1,5 +1,4 @@
 barba.init({
-    /*
     transitions: [
         {
             async ListeningStateChangedEvent({ current, next, trigger}) {
@@ -16,10 +15,8 @@ barba.init({
             }
         }
     ]
-    */
 })
 
-/*
 function leaveAnimation(current) {
     const animation = anime.timeline()
     .add({
@@ -43,4 +40,3 @@ function enterAnimation(next) {
     }, '-=300');
     return animation.finished;
 }
-*/
