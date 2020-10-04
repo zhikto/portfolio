@@ -3,8 +3,6 @@
   margin: 0; }
 
 html, body {
-  width: 100vw;
-  height: 100vw;
   font-family: din-2014,'Noto Sans JP',sans-serif; }
 
 a {
@@ -13,18 +11,27 @@ a {
 body {
   overflow: hidden; }
 
-header {
-  padding: 80px 120px 16px; }
-
 .container {
-  width: 100%;
+  margin: 80px 120px 16px;
   display: flex;
+  height: 48px;
+  align-items: center;
   justify-content: space-between; }
 
-.header_logo a {
-  font-size: 32px;
-  font-weight: bold;
-  color: #434343; }
+.header_logo {
+  display: flex;
+  align-items: center; }
+  .header_logo a {
+    font-size: 32px;
+    font-weight: bold;
+    color: #434343;
+    margin-right: 8px; }
+  .header_logo p {
+    font-size: 32px;
+    line-height: 41px;
+    font-weight: bold;
+    color: #434343;
+    margin-right: 8px; }
 
 .header_about a {
   width: 40px;
@@ -74,5 +81,70 @@ header {
     position: absolute;
     width: 100%;
     transition: 0.5s all; }
+
+.detail_box {
+  margin: 64px 200px; }
+  .detail_box h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #434343; }
+  .detail_box .tag_box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px; }
+    .detail_box .tag_box .tag {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      color: #D5D5D5;
+      background: white;
+      padding: 12px 24px;
+      border: 3px solid #EEEEEE;
+      box-sizing: border-box;
+      border-radius: 32px;
+      margin-right: 16px; }
+  .detail_box .detail_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0; }
+    .detail_box .detail_container .detail_img {
+      width: 50%; }
+      .detail_box .detail_container .detail_img img {
+        width: 100%; }
+    .detail_box .detail_container .detail_text {
+      width: 50%;
+      padding: 20px 48px; }
+      .detail_box .detail_container .detail_text p {
+        font-size: 20px;
+        font-weight: bold;
+        color: #434343;
+        line-height: 40px; }
+
+.detail_opacity {
+  opacity: 0.25;
+  transition: opacity 0.5s; }
+  .detail_opacity:hover {
+    opacity: 1; }
+
+.barba-leave-active,
+.barba-enter-active {
+  transition: opacity 450ms ease; }
+
+/* initial state */
+.barba-leave {
+  opacity: 1; }
+
+.barba-enter {
+  opacity: 0; }
+
+/* ending state */
+.barba-leave-to {
+  opacity: 0; }
+
+.barba-enter-to {
+  opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
