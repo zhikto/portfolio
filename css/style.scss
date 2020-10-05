@@ -46,6 +46,26 @@ body {
     }
 }
 
+.directory {
+    display: flex;
+    align-items: center;
+
+    a {
+        font-size: 32px;
+        font-weight: bold;
+        color: $color-black;
+        margin-right: 8px;
+    }
+
+    p {
+        font-size: 32px;
+        line-height: 41px;
+        font-weight: bold;
+        color: $color-black;
+        margin-right: 8px;
+    }
+}
+
 .header_about {
     a {
         width: 40px;

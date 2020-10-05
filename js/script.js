@@ -3,6 +3,7 @@ barba.init({
     {
         async ListeningStateChangedEvent({ current, next, trigger}) {
             const leave = await leaveAnimation(current);
+            document.getElementById('test').remove();
             return leave;
         },
         enter({ current, next, trigger }) {
