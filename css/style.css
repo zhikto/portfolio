@@ -38,7 +38,8 @@ body {
   height: 40px; }
 
 .content_box {
-  margin: 64px 184px;
+  width: 1056px;
+  margin: 64px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }

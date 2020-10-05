@@ -7,6 +7,8 @@ barba.init({
         },
         enter({ current, next, trigger }) {
             enterAnimation(next);
+            var test = document.getElementById('test');
+            test.insertAdjacentHTML('beforeend','<p>/</p><p>MAG LIGHT</p>');
         }
     }
     ]
